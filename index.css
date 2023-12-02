@@ -32,6 +32,12 @@ button {
   padding: 8px 10px 8px 15px;
 }
 
+@media (width < 750px) {
+  .header-search-container {
+    gap: 5px;
+  }
+}
+
 .header-sub-button {
   background: none;
   border: none;
@@ -106,11 +112,38 @@ button {
   justify-content: space-between;
 }
 
+@media (width < 530px) {
+  .filter-container {
+    top: 160px;
+  }
+}
+
+@media (width >750px) and (width < 830px) {
+  .filter-container {
+    top: 120px;
+  }
+}
+
+@media (width > 531px) and (width < 750px) {
+  .header-search-container {
+    gap: 5px;
+  }
+  .filter-sub-container {
+    gap: 10px;
+  }
+  .filter-container {
+    top: 120px;
+  }
+}
+
 .filter-button-container {
   display: flex;
   align-items: center;
   gap: 20px;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
+  width: fit-content;
+  max-width: 100%;
+  overflow-y: hidden;
 }
 
 .filter-icon-button {
@@ -226,6 +259,12 @@ input:checked + .slider:before {
 
 .holtel-card {
   width: 300px;
+}
+
+@media (width<700px) {
+  .holtel-card {
+    width: 80%;
+  }
 }
 
 .card-like-button {
@@ -355,4 +394,19 @@ input:checked + .slider:before {
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+}
+
+.show-map-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: black;
+  color: #f7f7f7;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 50px;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
